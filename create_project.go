@@ -82,12 +82,6 @@ func createProject(fileName string) {
 		log.Fatalln(err)
 	}
 
-	//readme
-	err = ioutil.WriteFile("README.md", []byte(readme), 0777)
-	if err != nil {
-		log.Fatalln(err)
-	}
-
 	//generate server.go
 	err = copyServerFile()
 	if err != nil {
